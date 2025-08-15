@@ -83,11 +83,19 @@ nav ul li a:hover::after {
 .about-col-2 {
     flex-basis: 60%;
 }
-.sub-title {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
+.subtitle {
+  text-align: center;
+  width: 100%;
 }
+.subtitle {
+  text-align: center;
+  width: 100%;
+}
+
+.subtitle span {
+  color: #ff004f; /* pink */
+}
+
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
@@ -126,10 +134,539 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
     display: block;
 }
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+.Technical-bars .bar {
+    margin-top: 40px 0;
+}
+.Technical-bars .bar:first-child{
+    margin-top: 0;
+}
+.Technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform: scale(0);
+    transform-origin: left;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.progress-line.html-span{
+    width: 90%;
+}
+.progress-line.css-span{
+    width: 60%;
+}
+.progress-line.c-span{
+    width: 85%;
+}
+.progress-line.python-span{
+    width: 50%;
+}
+.progress-line.figma-span{
+    width: 75%;
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.css span::after{
+    content: "60%";
+}
+.progress-line.c span::after{
+    content: "85%";
+}
+.progress-line.python span::after{
+    content: "90%";
+}
+.progress-line.figma span::after{
+    content: "90%";
+}
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%) rotatr(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+}
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path-1{animation: animate-path1 1s 1s linear forwards}
+.path-2{animation: animate-path2 1s 1s linear forwards}
+.path-3{animation: animate-path3 1s 1s linear forwards}
+.path-4{animation: animate-path4 1s 1s linear forwards}
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 175;
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ===== Technical Skills Bars ===== */
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 23px;
+}
+
+.Technical-bars .bar {
+    margin: 40px 0;
+}
+
+.Technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.Technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.Technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #ff004f;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* Widths for progress bars */
+.progress-line.html span { width: 90%; }
+.progress-line.css span { width: 60%; }
+.progress-line.c span { width: 85%; }
+.progress-line.python span { width: 50%; }
+.progress-line.figma span { width: 75%; }
+
+/* Tooltip */
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progress-line.html span::after { content: "80%"; }
+.progress-line.css span::after { content: "80%"; }
+.progress-line.c span::after { content: "80%"; }
+.progress-line.python span::after { content: "80%"; }
+.progress-line.figma span::after { content: "80%"; }
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ===== Radial Bars ===== */
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #ff004f;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 { animation: animate-path1 1s 1s linear forwards; }
+.path-2 { animation: animate-path2 1s 1s linear forwards; }
+.path-3 { animation: animate-path3 1s 1s linear forwards; }
+.path-4 { animation: animate-path4 1s 1s linear forwards; }
+
+@keyframes animate-path1 {
+    100% { stroke-dashoffset: 50; }
+}
+@keyframes animate-path2 {
+    100% { stroke-dashoffset: 175; }
+}
+@keyframes animate-path3 {
+    100% { stroke-dashoffset: 125; }
+}
+@keyframes animate-path4 {
+    100% { stroke-dashoffset: 75; }
+}
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+
+/* ================= Projects Section ================= */
+#projects {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+#projects h1.sub-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+#projects h1.sub-title span {
+  color: #ff004f;
+}
+
+/* Project Card */
+#projects details {
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Hover effect */
+#projects details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 0, 79, 0.5);
+}
+
+/* Summary */
+#projects summary {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  list-style: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Remove default marker */
+#projects summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow */
+#projects summary::after {
+  content: '▶';
+  font-size: 18px;
+  color: #ff004f;
+  transition: transform 0.3s ease;
+}
+
+#projects details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+/* Project Description */
+#projects details p {
+  margin-top: 15px;
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #projects h1.sub-title {
+    font-size: 28px;
+  }
+
+  #projects summary {
+    font-size: 18px;
+  }
+
+  #projects details p {
+    font-size: 15px;
+  }
+}
+
+
 #portfolio,
 #Certificates {
     padding: 50px 0;
 }
+#Certificates {
+  margin-top: 50px; /* adjust px as needed */
+}
+
 .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
