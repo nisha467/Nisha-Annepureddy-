@@ -4,8 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nisha's Portfolio</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
   <header id="header">
@@ -19,7 +25,9 @@
         <ul id="sidemenu">
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#Certificates">Certificates</a></li>
+          <li><a href="#project" class="tab-link">Project</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -31,6 +39,7 @@
     </div>
   </header>
 
+  <!-- About Section -->
   <div id="about">
     <div class="container">
       <div class="row">
@@ -42,26 +51,14 @@
           <p>Energetic and passionate college student pursuing B.Tech, Electronics and Communication Engineering department in SVR Engineering College at JNTUA University. An enthusiastic fresher who is self-starter and capable to use technical skills for the betterment of the organization. Aim to use knowledge continuously learning and growing in the field of software development, a focused and goal-oriented engineering professional with zeal to make a winning career in software development.</p>
           
           <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
             <p class="tab-links" onclick="opentab('strengths')">Strengths</p>
             <p class="tab-links" onclick="opentab('languages')">Languages</p>
             <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
             <p class="tab-links" onclick="opentab('technology')">Technology</p>
           </div>
 
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>Python Programming</span></li>
-              <li><span>HTML & CSS</span></li>
-              <li><span>Basics of Django</span></li>
-              <li><span>Basics of DBMS</span></li>
-              <li><span>Git & GitHub</span></li>
-              <li><span>Basics of C</span></li>
-            </ul>
-          </div>
-
-          <div class="tab-contents" id="education">
+          <div class="tab-contents active-tab" id="education">
             <ul>
               <li><span>2022-2026</span><br>B.Tech (ECE) at SVR Engineering College, Nandyal</li>
               <li><span>2020-2022</span><br>Intermediate at K.V.S.R Junior College, Allagadda</li>
@@ -102,77 +99,190 @@
     </div>
   </div>
 
+  <!-- Skills Section -->
+  <section id="skills">
+    
+    <h1 class="subtitle">My <span>Skills</span></h1>
+    <div class="container1">
+        <h1 class="heading1">Technical Skills</h1>
+        <div class="Technical-bars">
+            <div class="bar">
+                <i style="color: #c95d2e" class="bx bxl-html5"></i>
+                <div class="info"><span>HTML and CSS</span></div>
+                <div class="progress-line html"><span></span></div>
+            </div>
+           
+            <div class="bar">
+                <i style="color: #ffd43b" class="bx bxl-python"></i>
+                <div class="info"><span>Python and Basics of C</span></div>
+                <div class="progress-line python"><span></span></div>
+            </div>
+            <div class="bar">
+                <i style="color: #ae4dff" class="bx bxl-figma"></i>
+                <div class="info"><span>Figma</span></div>
+                <div class="progress-line figma"><span></span></div>
+            </div>
+            <div class="bar">
+                <i style="color: #ffd43b" class="bx bxl-python"></i>
+                <div class="info"><span>Basics of DBMS  </span></div>
+                <div class="progress-line python"><span></span></div>
+            </div>
+            <div class="bar">
+                <i style="color: #ffd43b" class="bx bxl-python"></i>
+                <div class="info"><span>Basics of Django </span></div>
+                <div class="progress-line python"><span></span></div>
+            </div>
+            <div class="bar">
+                <i style="color: #ffd43b" class="bx bxl-python"></i>
+                <div class="info"><span>Git and GitHub</span></div>
+                <div class="progress-line python"><span></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1">
+        <h1 class="heading1">Professional Skills</h1>
+        <div class="radial-bars">
+            <div class="radial-bar">
+                <svg viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">70%</div>
+                <div class="text">Creativity</div>
+            </div>
+            <div class="radial-bar">
+                <svg viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">Communication</div>
+            </div>
+            <div class="radial-bar">
+                <svg viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">65%</div>
+                <div class="text">Problem Solving</div>
+            </div>
+            <div class="radial-bar">
+                <svg viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">85%</div>
+                <div class="text">Teamwork</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your Technical and Professional Skills content here (same as your original HTML) -->
+  </section>
+
+  <!-- Certificates Section -->
   <div id="Certificates">
     <div class="container">
-      <h1 class="sub-title">My Certificates</h1>
-      <div class="work-list">
-        <div class="work">
-          <img src= "images/Oracle.jpg" alt="Oracle Certificate">
-          <div class="layer">
-            <h3>Oracle</h3>
-            <p>This Certification belongs to Oracle course provided by Oracle University.</p>
-          </div>
+    
+    <h1 class="sub-title">My Certificates</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src= "images/Oracle.jpg" alt="Oracle Certificate">
+        <div class="layer">
+          <h3>Oracle</h3>
+          <p>This Certification belongs to Oracle course provided by Oracle University.</p>
         </div>
-        <div class="work">
-          <img src="images/GDSC.jpeg" alt="GDSC Certificate">
-          <div class="layer">
-            <h3>GDSC</h3>
-            <p>This Certification belongs to GDSC where we can explore our knowledge.</p>
-          </div>
-        </div>
-        <div class="work">
-          <img src="images/ibm.jpeg" alt="IBM Certificate">
-          <div class="layer">
-            <h3>IBM</h3>
-            <p>This Certification belongs to AI provided by IBM company.</p>
-          </div>
-        </div>
-        <div class="work">
-          <img src="images/ibm1.jpeg" alt="IBM Course Certificate">
-          <div class="layer">
-            <h3>IBM (Coursera)</h3>
-            <p>This Certification belongs to AI provided by Coursera.</p>
-          </div>
-        </div>
-
-        <div class="work">
-          <img src= "images/cloud computing.jpeg" alt="Cloud Certificate">
-          <div class="layer">
-            <h3>Cloud computing</h3>
-            <p>This Certification belongs to Cloud computing provided by Infosys springboard.</p>
-          </div>
-        </div>
-        <div class="work">
-          <img src="images/NPTEL.jpeg" alt="NPTEL Certificate">
-          <div class="layer">
-            <h3>NPTEL</h3>
-            <p>This Certification belongs to Computer Architecture.</p>
-          </div>
-        </div>
-
-        <div class="work">
-          <img src="images/Uipath.jpeg" alt="UiPath Certificate">
-          <div class="layer">
-            <h3>Uipath</h3>
-            <p>This certificate belongs to Uipath which helps to build skills.</p>
-          </div>
-        </div>
-
-        <div class="work">
-          <img src= "images/edx course.jpg" alt="Edx Certificate">
-          <div class="layer">
-            <h3>Edx</h3>
-            <p>This Certification belongs to Communication and Team work.</p>
-          </div>
-        </div>
-
-        
       </div>
-      <a href="#" class="btn">See More</a>
+      <div class="work">
+        <img src="images/GDSC.jpeg" alt="GDSC Certificate">
+        <div class="layer">
+          <h3>GDSC</h3>
+          <p>This Certification belongs to GDSC where we can explore our knowledge.</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/ibm.jpeg" alt="IBM Certificate">
+        <div class="layer">
+          <h3>IBM</h3>
+          <p>This Certification belongs to AI provided by IBM company.</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/ibm1.jpeg" alt="IBM Course Certificate">
+        <div class="layer">
+          <h3>IBM (Coursera)</h3>
+          <p>This Certification belongs to AI provided by Coursera.</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src= "images/cloud computing.jpeg" alt="Cloud Certificate">
+        <div class="layer">
+          <h3>Cloud computing</h3>
+          <p>This Certification belongs to Cloud computing provided by Infosys springboard.</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/NPTEL.jpeg" alt="NPTEL Certificate">
+        <div class="layer">
+          <h3>NPTEL</h3>
+          <p>This Certification belongs to Computer Architecture.</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/Uipath.jpeg" alt="UiPath Certificate">
+        <div class="layer">
+          <h3>Uipath</h3>
+          <p>This certificate belongs to Uipath which helps to build skills.</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src= "images/edx course.jpg" alt="Edx Certificate">
+        <div class="layer">
+          <h3>Edx</h3>
+          <p>This Certification belongs to Communication and Team work.</p>
+        </div>
+      </div>
+    </div>
+   
+
+      <!-- Your certificates content here (same as original) -->
     </div>
   </div>
+  <!--project section-->
+  <section id="project" class="tab-content">
+    <!-- Projects Section -->
+<section id="projects">
+  <div class="container">
+    <h1 class="sub-title">My <span>Projects</span></h1>
 
-  <!-- Contact -->
+    <details>
+      <summary>ShopEase – Responsive E-Commerce Website</summary>
+      <p>
+        A sleek and mobile-friendly e-commerce platform built using 
+        <strong>HTML, CSS, and JavaScript</strong>. It features an interactive 
+        product carousel, dynamic shopping cart with real-time updates, and a 
+        “Buy Now” checkout with payment confirmation. Designed with a clean, 
+        intuitive interface to deliver a seamless shopping experience across 
+        all devices.
+      </p>
+    </details>
+
+    <details>
+    
+  <summary>Project link</summary>
+  
+  <p>Check the project here: <a href="https://nisha467.github.io/project/" target="_blank">Open Project</a></p>
+
+    </details>
+
+    
+
+  </div>
+</section>
+
+  </section>
+<!-- Contact Section -->
   <div id="contact">
     <div class="container">
       <div class="row">
@@ -185,46 +295,67 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
           </div>
-          <a href="resume/Nisha Annepureddy_Resume.pdf" download class="btn btn2">Download Resume</a>
+          <a href="Annepureddy Nisha_Resume.pdf" download class="btn btn2">Download Resume</a>
         </div>
         <div class="contact-right">
-          <form name="submit-to-google-sheet">
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+          <form id="contactForm">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+            
+            <label>Email:</label>
+            <input type="email" name="email" required>
+            
+            <label>Message:</label>
+            <textarea name="message" required></textarea>
+            
             <button type="submit" class="btn btn2">Submit</button>
           </form>
-          <span id="msg"></span>
+          <p id="responseMsg"></p>
         </div>
       </div>
     </div>
-    <div class="copyright">
-      <p>&copy; 2022–2026 Nisha Annepureddy</p>
-    </div>
   </div>
 
+  <!-- Footer -->
+  <div class="copyright">
+    &copy; 2025 Nisha Annepureddy. All Rights Reserved.
+  </div>
+
+  <!-- Scripts -->
   <script>
-    const tablinks = document.getElementsByClassName("tab-links");
-    const tabcontents = document.getElementsByClassName("tab-contents");
-
+    // Tab functionality
     function opentab(tabname) {
-      for (let tablink of tablinks) {
-        tablink.classList.remove("active-link");
-      }
-      for (let tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
+      let tablinks = document.getElementsByClassName("tab-links");
+      let tabcontents = document.getElementsByClassName("tab-contents");
+      for (let link of tablinks) link.classList.remove("active-link");
+      for (let content of tabcontents) content.classList.remove("active-tab");
+
       document.getElementById(tabname).classList.add("active-tab");
+      event.currentTarget.classList.add("active-link");
     }
 
-    function openMenu() {
-      document.getElementById("sidemenu").style.right = "0";
-    }
-
-    function closeMenu() {
-      document.getElementById("sidemenu").style.right = "-200px";
-    }
+    // Contact form submission
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = {
+        name: e.target.name.value,
+        email: e.target.email.value,
+        message: e.target.message.value
+      };
+      fetch("https://script.google.com/macros/s/AKfycbyfvBKyLflx1sUVgH4DfLMNnGLwIE_kZ5hEeznUChqknfZlkSid_CNGvJQjDwI5B2Gb/exec", {
+        method: "POST",
+        body: JSON.stringify(formData)
+      })
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("responseMsg").textContent = "Thank you! Your message has been sent.";
+        e.target.reset();
+      })
+      .catch(err => {
+        document.getElementById("responseMsg").textContent = "Error sending message.";
+      });
+    });
   </script>
 </body>
 </html>
+
